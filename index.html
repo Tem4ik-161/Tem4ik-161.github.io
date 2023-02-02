@@ -1,117 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="icon" href="favicon.ico"><!-- 32×32 -->
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="./normalize.css" rel="stylesheet" />
-  <link href="./style.css" rel="stylesheet" />
-  <title>Vizitka</title>
-</head>
-
-<!-- видео в фоне -->
-
-<div class="intro">  
-  <div class="video">
-    <video class="video__media" src="video.mp4" autoplay muted loop></video>
-  </div>
-</div> 
-<header>
-
-<body>
-
-  <div class="intro__avatar">
-      <div class="avatar">
-        <img class="header__avatar" src="avatar.png" alt="avatar"/>
-    </div>
-  </div>
-
-  <div class="intro__title">
-    <div class="intro__content">
-        <h1> Артём Берчанов <font color="FF9600">QA</font>
-        </h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./normalize.css" rel="stylesheet" />
+    <link href="./ios.css" rel="stylesheet" />
+    <title>Vizitka</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="./avatar.png" alt="avatar" class="header__avatar" />
+      <div class="header__textContainer">
+        <h1 class="header__title">Артём Берчанов</h1>
+        <h3 class="header__subtitle">Тот, кто Вам нужен :)</h3>
       </div>
-    </div>
-  </header>
+    </header>
+    <main>
 
-  <main>
-    <div class="intro__title">
-      <div class="intro__content">
-        <h1 class="intro__my">
-          Привет! Меня зовут Артём. В тестировании более 2 лет,<br>
+      <section class="links">
+        <h2 class="links__header">Для связи</h2>
+        <ul class="links__container">
+
+          <li class="links__link">
+            <div class="img__holder">
+              <div class="links__color">
+                <img src="tg.png" alt="TELEGRAM" title="TELEGRAM">
+                <a class="links__color" href="https://t.me/Tem4ik_161">TELEGRAM</a>
+              </div>
+            </div>
+          </li>
+          
+          <li class="links__link">
+            <div class="img__holder">
+              <div class="links__color">
+                <img src="mail.png" alt="E-MAIL" title="E-MAIL">
+                <a class="links__color" href="https://berchanv1@gmail.com">E-MAIL</a>
+              </div>
+            </div>
+          </li>
+          <li class="links__link">
+            <div class="img__holder">
+              <div class="links__color">
+                <img src="vk.png" alt="VKONTAKTE" title="VKONTAKTE">
+                <a class="links__color" href="https://vk.com/id225373304"
+                >VKONTAKTE</a>
+              </div>
+            </div>
+          </li>
+          <li class="links__link">
+            <div class="img__holder">
+              <div class="links__color">
+                <img src="git.png" alt="GIT" title="GIT">
+                <a class="links__color" href="https://github.com/Tem4ik-161">GIT</a>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </section>
+
+      <section class="links">
+        <h2 class="links__header">Немного обо мне</h2>
+        <ul class="links__container">
+          <h1 class="intro__my">
+          Привет!👋 Меня зовут Артем.<br> В тестировании более 2х лет,<br>
           Постоянно учусь чему-то новому,<br>
           Правильно въедливый и внимательный,<br>
-          Бесконечность не предел XD
+          Бесконечность не предел XD🚀
         </h1>
-      </div>
-    </div>
-    
-    <div class="intro__content">
-      <div class="intro__title">
-    <h1 class="intro__Tools">
-      🛠️ Languages and Tools :
-    </h1>
-      </div>
-    </div>
-
-
-    <div class="intro__content">
-      <div class="line" >
-        <img class="intro__LT" src="tools/charles.png" alt="charles" title="charles">
-        <img class="intro__LT1" src="tools/androidstudio-original.svg" alt="androidstudio" title="androidstudio">
-        <img class="intro__LT2" src="tools/css3-original.svg" alt="css3" title="css3">
-        <img class="intro__LT" src="tools/html5-original.svg" alt="html5" title="html5">
-        <img class="intro__LT3" src="tools/cypress.svg" alt="cypress.svg" title="cypress">
-        <img class="intro__LT4" src="tools/github-original.svg" alt="github" title="github">
-        <img class="intro__LT" src="tools/git-original.svg" alt="git" title="git">
-        <img class="intro__LT" src="tools/javascript-plain.svg" alt="javascript" title="javascript">
-        <img class="intro__LT" src="tools/linux-original.svg" alt="linux" title="linux">
-        <img class="intro__LT" src="tools/postman-icon.svg" alt="postman" title="postman">
-        <img class="intro__LT" src="tools/python-original.svg" alt="python" title="python">
-        <img class="intro__LT" src="tools/sql.svg" alt="sql" title="sql">
-        <img class="intro__LT" src="tools/vscode-original.svg" alt="vscode" title="vscode"> 
-      </div>
-    </div>
-
-    <!-- текст на связи -->
-
-        <div class="contacts__text">  
-          <h1> НА СВЯЗИ👇
-          </h1>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- изображенеие на связь -->
-    <div class="contacts__img">
-      <img src="tg.png" alt="TELEGRAM" title="TELEGRAM">
-      <img src="mail.png" alt="E-MAIL" title="E-MAIL">
-      <img src="vk.png" alt="VKONTAKTE" title="VKONTAKTE">
-    </div>
-
-    <!-- линки на связь -->
-    <div class="links__intro">
-      <a class="links__color" href="https://t.me/Tem4ik_161">TELEGRAM</a>
-      <a class="links__color" href="https://berchanv1@gmail.com">E-MAIL</a>
-      <a class="links__color" href="https://vk.com/id225373304">VKONTAKTE</a>
-    </div>
-
-    <div class="contacts__GMI">  
-      <h1> ЖМИ 👉
-      </h1>
-    </div>
-  </div>
-</div>
-
-<footer> 
-    <button type= "button" class="btn" href=""> ШУТЕЕЧКА </button>
-    <script type="text/javascript" src="js.js"></script>
-</footer>
-
-
-</main>
-
-    
-</body>
+      </section>
+    </main>
+    <footer>
+      <button class="button-link" href="">👉ШУТЕЕЧКА👈</button>
+      <script type="text/javascript" src="js.js"></script>
+    </footer>
+  </body>
 </html>
