@@ -7,7 +7,6 @@ body {
   justify-content: center;
   align-items: center;
   text-shadow: #000 3px 0 20px;
-  padding-right: 25px;
 }
 
 .header {
@@ -111,11 +110,11 @@ body {
 .img__holder {
   display: flex;
   align-items: center;
-  padding-left: 70px;
+  padding-left: 150px;
 
 }
 
-/*.links__link,
+.links__link,
 .links__title {
   font-size: 14px;
   font-size: 1.4;
@@ -133,7 +132,7 @@ body {
   width: 280px;
   justify-content: center;
   align-items: center;
-}*/
+}
 
 
 .links__link:last-child {
