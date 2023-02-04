@@ -31,7 +31,7 @@ body {
 .header__avatar {
   border-radius: 50%;
   width: 80px;
-  height: 80px;
+  height: 75px;
 }
 
 .header__title {
@@ -110,7 +110,7 @@ body {
 .img__holder {
   display: flex;
   align-items: center;
-  padding-left: 150px;
+  padding-left: 290px;
 
 }
 
@@ -128,7 +128,6 @@ body {
   align-items: flex-stat;
   padding: 0px 0px 10px;
   gap: 30px;
-  border-bottom: 1px solid #dedede;
   width: 280px;
   justify-content: center;
   align-items: center;
@@ -173,4 +172,7 @@ footer {
   text-decoration: none;
 }
 
-
+/*убираем лишний скролл*/
+@media screen and (max-width: 767px) {
+     html, body { overflow-x: hidden; }
+}
