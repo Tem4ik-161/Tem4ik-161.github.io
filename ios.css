@@ -29,9 +29,9 @@ body {
 }
 
 .header__avatar {
-  border-radius: 50%;
+  border-radius: 100%;
   width: 80px;
-  height: 75px;
+  height: 80px;
 }
 
 .header__title {
