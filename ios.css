@@ -1,7 +1,9 @@
 body {
   font-family: "Helvetica";
   background-color: #2f4f4f;
-  color: #000000;
+  color: #000;
+  color: lime;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,16 +15,15 @@ body {
   box-sizing: border-box;
   margin: 40px 0 20px 0;
   display: flex;
-
   width: 320px;
-  column-gap: 20px;
-  row-gap: 10px;
+  gap: 20px;
+  gap: 10px;
   border-radius: 20px;
   padding: 20px;
   background-color: #808080;
 }
 
-.header__textContainer {
+.header__text-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -91,15 +92,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-   margin-right: 150px;
-
-
+  margin-right: 150px;
   color: #fff;
   text-decoration: none;
   font-weight: 700;
   font-size: 14px;
-
-
   transition: color 0.3s linear;
 }
 
@@ -111,13 +108,11 @@ body {
   display: flex;
   align-items: center;
   padding-left: 290px;
-
 }
 
 .links__link,
 .links__title {
   font-size: 14px;
-  font-size: 1.4;
   color: #FFF;
   text-shadow: #000 3px 0 20px;
 }
@@ -126,7 +121,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: flex-stat;
-  padding: 0px 0px 10px;
+  padding: 0 0 10px;
   gap: 30px;
   width: 280px;
   justify-content: center;
@@ -137,7 +132,6 @@ body {
 .links__link:last-child {
   border-bottom: none;
 }
-
 
 .linsk__link,
 .links__link:visited {
@@ -164,15 +158,15 @@ footer {
   width: 320px;
   background: #808080;
   border-radius: 15px;
-
   font-size: 14px;
   line-height: 1.4;
-
   color: #FFF;
   text-decoration: none;
 }
 
 /*убираем лишний скролл*/
 @media screen and (max-width: 767px) {
-     html, body { overflow-x: hidden; }
+     html, body { 
+      overflow-x: hidden; 
+    }
 }
