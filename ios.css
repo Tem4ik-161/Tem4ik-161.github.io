@@ -1,23 +1,21 @@
 body {
-  font-family: "Helvetica";
+  font-family: "Helvetica", sans-serif;
   background-color: #2f4f4f;
-  color: #000;
   color: lime;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-shadow: #000 3px 0 20px;
+  text-shadow: 0 3px 20px #000;
 }
 
 .header {
   box-sizing: border-box;
-  margin: 40px 0 20px 0;
+  margin: 40px 0 20px;
   display: flex;
   width: 320px;
   gap: 20px;
-  gap: 10px;
   border-radius: 20px;
   padding: 20px;
   background-color: #808080;
@@ -41,7 +39,7 @@ body {
   font-weight: 700;
   font-size: 22px;
   line-height: 1.2;
-  font-family: "Helvetica Neue";
+  font-family: "Helvetica Neue", sans-serif;
   align-items: center;
 }
 
@@ -58,7 +56,7 @@ body {
   margin-bottom: 20px;
 }
 
-.intro__my {
+.intro-my {
   font-size: 15px;
   color: #FFF;
 }
@@ -67,8 +65,8 @@ body {
   color: #FF9600;
   font-size: 24px;
   line-height: 1.4;
-  margin: 0 0 15px 0;
-  font-family: "Helvetica Neue";
+  margin: 0 0 15px;
+  font-family: "Helvetica Neue", sans-serif;
 }
 
 .links__container {
@@ -80,9 +78,6 @@ body {
   align-items: flex-start;
   padding: 20px 20px 10px;
   gap: 10px;
-  flex: none;
-  order: 1;
-  flex-grow: 0;
   box-sizing: border-box;
   margin: 0;
 }
@@ -114,13 +109,13 @@ body {
 .links__title {
   font-size: 14px;
   color: #FFF;
-  text-shadow: #000 3px 0 20px;
+  text-shadow: 0 3px 20px #000;
 }
 
 .links__link {
   display: flex;
   flex-direction: row;
-  align-items: flex-stat;
+  align-items: flex-start;
   padding: 0 0 10px;
   gap: 30px;
   width: 280px;
@@ -128,12 +123,11 @@ body {
   align-items: center;
 }
 
-
 .links__link:last-child {
   border-bottom: none;
 }
 
-.linsk__link,
+.links__link,
 .links__link:visited {
   text-decoration: none;
   color: #FFF;
@@ -145,8 +139,9 @@ body {
 }
 
 footer {
-  margin: 0 0 40px 0;
+  margin: 0 0 40px;
 }
+
 .button-link {
   margin-top: 10px;
   box-sizing: border-box;
@@ -164,9 +159,10 @@ footer {
   text-decoration: none;
 }
 
-/*убираем лишний скролл*/
-@media screen and (max-width: 767px) {
-     html, body { 
-      overflow-x: hidden; 
-    }
+/* Убираем лишний скролл */
+@media (max-width: 767px) {
+  html, body {
+    overflow-x: hidden;
+  }
 }
+
