@@ -13,7 +13,6 @@ body {
   box-sizing: border-box;
   margin: 40px 0 20px 0;
   display: flex;
-
   width: 320px;
   column-gap: 20px;
   row-gap: 10px;
@@ -91,15 +90,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-   margin-right: 150px;
-
-
+  margin-right: 150px;
   color: #fff;
   text-decoration: none;
   font-weight: 700;
   font-size: 14px;
-
-
   transition: color 0.3s linear;
 }
 
@@ -111,7 +106,6 @@ body {
   display: flex;
   align-items: center;
   padding-left: 290px;
-
 }
 
 .links__link,
@@ -138,7 +132,6 @@ body {
   border-bottom: none;
 }
 
-
 .linsk__link,
 .links__link:visited {
   text-decoration: none;
@@ -164,10 +157,8 @@ footer {
   width: 320px;
   background: #808080;
   border-radius: 15px;
-
   font-size: 14px;
   line-height: 1.4;
-
   color: #FFF;
   text-decoration: none;
 }
