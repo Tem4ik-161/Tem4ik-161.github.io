@@ -61,7 +61,7 @@ body {
   color: #FFF;
 }
 
-.links__header {
+.links-header {
   color: #FF9600;
   font-size: 24px;
   line-height: 1.4;
@@ -69,7 +69,7 @@ body {
   font-family: "Helvetica Neue", sans-serif;
 }
 
-.links__container {
+.links-container {
   list-style-type: none;
   background: #808080;
   border-radius: 20px;
