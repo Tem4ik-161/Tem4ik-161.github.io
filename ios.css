@@ -8,6 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   text-shadow: 0 3px 20px #000;
+  min-height: 100vh;
 }
 
 .header {
@@ -162,7 +163,10 @@ footer {
 /* Убираем лишний скролл */
 @media (max-width: 767px) {
   html, body {
-    overflow-x: hidden;
+    overflow: hidden;
+    width: 100%;
+    height: auto; /* Разрешаем контенту занимать необходимую высоту */
+    min-height: 100vh;
   }
 }
 
