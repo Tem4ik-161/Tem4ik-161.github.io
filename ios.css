@@ -180,3 +180,19 @@ footer {
   pointer-events: none; /* Отключаем взаимодействие с элементом */
   overflow: hidden; /* Отключаем скролл внутри контейнера */
 }
+
+#random-text {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid lime;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: opacity 0.3s ease-in-out;
+}
+
+#random-text.hidden {
+  opacity: 0;
+}
