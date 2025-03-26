@@ -1,14 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-  /* Это объявление переменной, мы нашли кнопку по тегу */
-  const button = document.querySelector('button');
+  const button = document.getElementById('smeshnushka-button');
+  const modal = document.getElementById('modal');
+  const overlay = document.getElementById('overlay');
+  const closeModalButton = document.getElementById('close-modal');
+  const modalContent = document.getElementById('modal-content');
 
-  /* Проверяем, что кнопка найдена */
-  if (!button) {
-    console.error("Кнопка не найдена!");
-    return;
-  }
-
-  /* Массив с рандомными текстами (шутками) */
+  // Массив с рандомными текстами (шутками)
   const jokes = [
     "У тестировщика всегда чётное количество синяков: если он наступил на грабли - обязан воспроизвести ошибку.",
     "Тестировщик — это тот, кто знает, что сломается, ещё до того, как это сделают разработчики.",
@@ -17,16 +14,40 @@ document.addEventListener('DOMContentLoaded', function () {
     "Если тестировщик не нашёл багов, значит, он их ещё не искал."
   ];
 
-  /* Функция для получения случайного элемента из массива */
+  // Функция для получения случайного элемента из массива
   function getRandomJoke() {
-    const randomIndex = Math.floor(Math.random() * jokes.length); // Генерируем случайный индекс
-    return jokes[randomIndex]; // Возвращаем случайную шутку
+    const randomIndex = Math.floor(Math.random() * jokes.length);
+    return jokes[randomIndex];
   }
 
-  /* Тут на кнопку навешиваем обработчик, который ждёт клика и тогда запустит логику */
-  button.addEventListener('click', function () {
-    const randomJoke = getRandomJoke(); // Получаем случайную шутку
-    alert(randomJoke); // Показываем её в alert
+  // Функция для открытия модального окна
+  function openModal() {
+    const randomJoke = getRandomJoke();
+    modalContent.textContent = randomJoke; // Вставляем шутку в модальное окно
+    modal.style.display = 'block'; // Показываем модальное окно
+    overlay.style.display = 'block'; // Показываем фон затемнения
+  }
+
+  // Функция для закрытия модального окна
+  function closeModal() {
+    modal.style.display = 'none'; // Скрываем модальное окно
+    overlay.style.display = 'none'; // Скрываем фон затемнения
+  }
+
+  // Открываем модальное окно при нажатии на кнопку "Смешнушка"
+  button.addEventListener('click', openModal);
+
+  // Закрываем модальное окно при нажатии на кнопку "Закрыть"
+  closeModalButton.addEventListener('click', closeModal);
+
+  // Закрываем модальное окно при клике на затемнённый фон
+  overlay.addEventListener('click', closeModal);
+
+  // Закрываем модальное окно при нажатии клавиши Esc
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+      closeModal();
+    }
   });
 });
 
