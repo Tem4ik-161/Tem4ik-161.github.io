@@ -1,81 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="./normalize.css" rel="stylesheet" />
+  <link href="./ios.css" rel="stylesheet" />
+  <title>Vizitka</title>
+</head>
+<body>
   <div class="matrix"></div>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./normalize.css" rel="stylesheet" />
-    <link href="./ios.css" rel="stylesheet" />
-    <title>Vizitka</title>
-  </head>
-  <link rel="icon" href="favicon.ico">
-  <body>
-    <header class="header">
-      <img src="./avatar.png" alt="avatar" class="header-avatar" />
-      <div class="header__text-container">
-        <h1 class="header-title">Артём <br> Берчанов</h1>
-        <h3 class="header-subtitle">Тот, кто Вам нужОн☝️</h3>
-      </div>
-    </header>
-    <main>
-
-      <section class="links">
-        <h2 class="links-header">Для связи:</h2>
-        <ul class="links-container">
-
-          <li class="links__link">
-            <div class="img__holder">
-              <div class="links__color">
-                <img src="tg.png" alt="TELEGRAM" title="TELEGRAM">
-                <a class="links__color" href="https://t.me/Tem4ik_161">TELEGRAM</a>
-              </div>
+  <header class="header">
+    <img src="./avatar.png" alt="avatar" class="header-avatar" />
+    <div class="header__text-container">
+      <h1 class="header-title">Артём <br> Берчанов</h1>
+      <h3 class="header-subtitle">Тот, кто Вам нужОн☝️</h3>
+    </div>
+  </header>
+  <main>
+    <section class="links">
+      <h2 class="links-header">Для связи:</h2>
+      <ul class="links-container">
+        <li class="links__link">
+          <div class="img__holder">
+            <div class="links__color">
+              <img src="tg.png" alt="TELEGRAM" title="TELEGRAM">
+              <a class="links__color" href="https://t.me/Tem4ik_161">TELEGRAM</a>
             </div>
-          </li>
-          
-          <li class="links__link">
-            <div class="img__holder">
-              <div class="links__color">
-                <img src="mail.png" alt="E-MAIL" title="E-MAIL">
-                <a class="links__color" href="https://berchanv1@gmail.com">E-MAIL</a>
-              </div>
+          </div>
+        </li>
+        <li class="links__link">
+          <div class="img__holder">
+            <div class="links__color">
+              <img src="mail.png" alt="E-MAIL" title="E-MAIL">
+              <a class="links__color" href="https://berchanv1@gmail.com">E-MAIL</a>
             </div>
-          </li>
-          <li class="links__link">
-            <div class="img__holder">
-              <div class="links__color">
-                <img src="vk.png" alt="VKONTAKTE" title="VKONTAKTE">
-                <a class="links__color" href="https://vk.com/id225373304"
-                >VKONTAKTE</a>
-              </div>
+          </div>
+        </li>
+        <li class="links__link">
+          <div class="img__holder">
+            <div class="links__color">
+              <img src="vk.png" alt="VKONTAKTE" title="VKONTAKTE">
+              <a class="links__color" href="https://vk.com/id225373304">VKONTAKTE</a>
             </div>
-          </li>
-          <li class="links__link">
-            <div class="img__holder">
-              <div class="links__color">
-                <img src="git.png" alt="GIT" title="GIT">
-                <a class="links__color" href="https://github.com/Tem4ik-161">GIT</a>
-              </div>
+          </div>
+        </li>
+        <li class="links__link">
+          <div class="img__holder">
+            <div class="links__color">
+              <img src="git.png" alt="GIT" title="GIT">
+              <a class="links__color" href="https://github.com/Tem4ik-161">GIT</a>
             </div>
-          </li>
-
-        </ul>
-      </section>
-
-      <section class="links">
-        <h2 class="links-header">Немного обо мне:</h2>
-        <ul class="links-container">
-          <h1 class="intro-my">
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="links">
+      <h2 class="links-header">Немного обо мне:</h2>
+      <ul class="links-container">
+        <h1 class="intro-my">
           Привет!👋 Меня зовут Артём.<br> В тестировании я уже более 4 лет,<br>
           Постоянно учусь чему-то новому,<br>
           Правильно въедливый и внимательный,<br>
           Знать путь и пройти его – не одно и тоже. ©
         </h1>
-      </section>
-    </main>
-    <footer>
-      <button class="button-link" href="">👉СМЕШНУШКА👈</button>
-      <script type="text/javascript" src="js.js"></script>
-    </footer>
-  </body>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <button class="button-link" id="smeshnushka-button">👉СМЕШНУШКА👈</button>
+  </footer>
+
+  <!-- Модальное окно -->
+  <div class="overlay" id="overlay"></div>
+  <div class="modal" id="modal">
+    <div class="modal-content" id="modal-content">
+      <!-- Здесь будет текст шутки -->
+    </div>
+    <button class="close-button" id="close-modal">Закрыть</button>
+  </div>
+
+  <script type="text/javascript" src="js.js"></script>
+</body>
 </html>
