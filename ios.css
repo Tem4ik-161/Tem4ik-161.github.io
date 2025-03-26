@@ -163,10 +163,20 @@ footer {
 /* Убираем лишний скролл */
 @media (max-width: 767px) {
   html, body {
-    overflow: hidden;
+    overflow-x: hidden; /* Отключаем горизонтальный скролл */
+    overflow-y: auto;   /* Разрешаем вертикальный скролл */
     width: 100%;
-    height: auto; /* Разрешаем контенту занимать необходимую высоту */
-    min-height: 100vh;
+    min-height: 100vh; /* Минимальная высота экрана */
   }
 }
 
+.matrix {
+  position: fixed; /* Фиксируем элемент на экране */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Помещаем его под основным контентом */
+  pointer-events: none; /* Отключаем взаимодействие с элементом */
+  overflow: hidden; /* Отключаем скролл внутри контейнера */
+}
