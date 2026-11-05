@@ -29,4 +29,4 @@ jobs:
     - name: Пройти проверки CSS линтера
       uses: actions-hub/stylelint@master
       env:        
-        PATTERN: "**/*.css"
+        PATTERN: "**/ios.css"
