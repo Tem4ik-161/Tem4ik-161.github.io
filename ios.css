@@ -1,5 +1,5 @@
 body {
-  font-family: "Helvetica", sans-serif;
+  font-family: Helvetica, sans-serif;
   background-color: #2f4f4f;
   color: lime;
   overflow: hidden;
@@ -22,7 +22,7 @@ body {
   background-color: #808080;
 }
 
-.header__text-container {
+.header-text-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
