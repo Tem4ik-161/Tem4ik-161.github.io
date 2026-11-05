@@ -83,7 +83,7 @@ body {
   margin: 0;
 }
 
-.links__color {
+.links-color {
   width: 280px;
   display: flex;
   justify-content: center;
@@ -96,27 +96,26 @@ body {
   transition: color 0.3s linear;
 }
 
-.links__color:hover {
+.links-color:hover {
   color: red;
 }
 
-.img__holder {
+.img-holder {
   display: flex;
   align-items: center;
   padding-left: 290px;
 }
 
-.links__link,
-.links__title {
+.links-link,
+.links-title {
   font-size: 14px;
   color: #FFF;
   text-shadow: 0 3px 20px #000;
 }
 
-.links__link {
+.links-link {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
   padding: 0 0 10px;
   gap: 30px;
   width: 280px;
@@ -124,17 +123,17 @@ body {
   align-items: center;
 }
 
-.links__link:last-child {
-  border-bottom: none;
-}
-
-.links__link,
-.links__link:visited {
+.links-link,
+.links-link:visited {
   text-decoration: none;
   color: #FFF;
 }
 
-.links__title {
+.links-link:last-child {
+  border-bottom: none;
+}
+
+.links-title {
   margin: 0;
   min-width: 100px;
 }
@@ -161,10 +160,9 @@ footer {
 }
 
 /* Убираем лишний скролл */
-@media (max-width: 767px) {
+@media (width <= 767px) {
   html, body {
-    overflow-x: hidden; /* Отключаем горизонтальный скролл */
-    overflow-y: auto;   /* Разрешаем вертикальный скролл */
+    overflow: hidden auto; /* Горизонтальный скролл скрыт, вертикальный доступен */
     width: 100%;
     min-height: 100vh; /* Минимальная высота экрана */
   }
@@ -189,7 +187,7 @@ footer {
   padding: 10px;
   border: 2px solid lime;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgb(0 0 0 / 70%);
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -207,10 +205,10 @@ footer {
   width: 80%;
   max-width: 400px;
   background-color: #333;
-  color: rgb(227, 237, 227);
+  color: rgb(227 237 227);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 10px rgb(0 0 0 / 50%);
   z-index: 1000;
   text-align: center;
 }
@@ -242,6 +240,6 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgb(0 0 0 / 70%);
   z-index: 999;
 }
