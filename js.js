@@ -64,6 +64,68 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+  const aboutText = document.querySelector('.intro-my');
+  if (!aboutText) return;
+
+  const typingParts = Array.from(aboutText.querySelectorAll('.typing-part'));
+  const wavingHand = aboutText.querySelector('.wave-sticker');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (reduceMotion) {
+    wavingHand.classList.add('is-visible');
+    return;
+  }
+
+  const originalTexts = typingParts.map((part) => Array.from(part.textContent));
+
+  function startTyping() {
+    typingParts.forEach((part) => {
+      part.textContent = '';
+    });
+
+    let partIndex = 0;
+    let characterIndex = 0;
+
+    function typeNextCharacter() {
+      if (partIndex >= typingParts.length) return;
+
+      const part = typingParts[partIndex];
+      const characters = originalTexts[partIndex];
+      part.classList.add('is-typing');
+
+      if (characterIndex < characters.length) {
+        const character = characters[characterIndex];
+        part.textContent += character;
+        characterIndex += 1;
+        const pause = /[.,!?…]/u.test(character) ? 220 : 38;
+        window.setTimeout(typeNextCharacter, pause);
+        return;
+      }
+
+      part.classList.remove('is-typing');
+      if (partIndex === 0) wavingHand.classList.add('is-visible');
+      partIndex += 1;
+      characterIndex = 0;
+      window.setTimeout(typeNextCharacter, partIndex === 1 ? 420 : 160);
+    }
+
+    typeNextCharacter();
+  }
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        observer.disconnect();
+        startTyping();
+      }
+    }, { threshold: 0.2 });
+    observer.observe(aboutText);
+  } else {
+    startTyping();
+  }
+});
+
 // Получаем контейнер
 const matrix = document.querySelector('.matrix');
 
