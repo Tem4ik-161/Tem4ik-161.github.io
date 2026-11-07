@@ -58,8 +58,69 @@ body {
 }
 
 .intro-my {
+  min-height: 6.5em;
   font-size: 15px;
   color: #FFF;
+}
+
+.typing-part.is-typing::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 2px;
+  background: #FF9600;
+  vertical-align: -0.1em;
+  animation: typing-caret-blink 800ms steps(2, start) infinite;
+}
+
+@keyframes typing-caret-blink {
+  to {
+    opacity: 0;
+  }
+}
+
+.wave-sticker {
+  display: inline-block;
+  opacity: 0;
+  transform: scale(0.3);
+  transform-origin: 70% 70%;
+}
+
+.wave-sticker.is-visible {
+  opacity: 1;
+  transform: scale(1);
+  animation: hand-wave 850ms ease-in-out 1;
+}
+
+@keyframes hand-wave {
+  0% {
+    transform: scale(0.3) rotate(0);
+  }
+
+  15% {
+    transform: scale(1.15) rotate(-18deg);
+  }
+
+  30% {
+    transform: scale(1) rotate(15deg);
+  }
+
+  45% {
+    transform: rotate(-14deg);
+  }
+
+  60% {
+    transform: rotate(12deg);
+  }
+
+  75% {
+    transform: rotate(-8deg);
+  }
+
+  100% {
+    transform: rotate(0) scale(1);
+  }
 }
 
 .links-header {
@@ -87,6 +148,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+  width: 130px;
   color: #fff;
   text-decoration: none;
   font-weight: 700;
@@ -147,9 +209,16 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .contact-link:hover .telegram-icon,
   .contact-link:hover .email-icon,
-  .contact-link:hover .vk-icon,
-  .contact-link:hover .git-icon {
+  .contact-link:hover .git-icon,
+  .typing-part.is-typing::after,
+  .wave-sticker.is-visible,
+  .button-link:hover .pointing-hand {
     animation: none;
+  }
+
+  .wave-sticker.is-visible {
+    opacity: 1;
+    transform: none;
   }
 }
 
@@ -185,43 +254,6 @@ body {
   100% {
     filter: drop-shadow(0 0 0 rgb(168 85 247 / 0%));
     transform: perspective(160px) rotate3d(0.25, 1, 0.15, 360deg) scale(1);
-  }
-}
-
-.vk-icon {
-  transform-origin: center;
-}
-
-.contact-link:hover .vk-icon {
-  animation: vk-greeting 700ms ease-in-out forwards;
-}
-
-@keyframes vk-greeting {
-  0% {
-    filter: drop-shadow(0 0 0 rgb(0 119 255 / 0%));
-    transform: translateY(0) rotate(0) scale(1);
-  }
-
-  25% {
-    filter: drop-shadow(0 0 6px rgb(0 119 255 / 65%));
-    transform: translateY(-8px) rotate(-8deg) scale(1.08);
-  }
-
-  45% {
-    transform: translateY(-3px) rotate(7deg) scale(1.05);
-  }
-
-  65% {
-    transform: translateY(-1px) rotate(-4deg) scale(1.02);
-  }
-
-  82% {
-    transform: translateY(0) rotate(2deg) scale(1);
-  }
-
-  100% {
-    filter: drop-shadow(0 0 0 rgb(0 119 255 / 0%));
-    transform: translateY(0) rotate(0) scale(1);
   }
 }
 
@@ -310,6 +342,7 @@ footer {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 8px;
   padding: 15px;
   width: 320px;
   background: #808080;
@@ -318,6 +351,33 @@ footer {
   line-height: 1.4;
   color: #FFF;
   text-decoration: none;
+}
+
+.pointing-hand {
+  display: inline-block;
+  transform-origin: center;
+}
+
+.pointing-hand-left {
+  --approach-x: 1px;
+}
+
+.pointing-hand-right {
+  --approach-x: -1px;
+}
+
+.button-link:hover .pointing-hand {
+  animation: hands-approach 700ms ease-in-out infinite alternate;
+}
+
+@keyframes hands-approach {
+  from {
+    transform: translateX(0) scale(1);
+  }
+
+  to {
+    transform: translateX(var(--approach-x)) scale(1.2);
+  }
 }
 
 /* Убираем лишний скролл */
