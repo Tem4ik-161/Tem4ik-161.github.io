@@ -153,7 +153,6 @@ body {
   background-size: 250% 100%;
   background-position: 100% 0;
   background-clip: text;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: heading-shine 6s linear infinite;
 }
